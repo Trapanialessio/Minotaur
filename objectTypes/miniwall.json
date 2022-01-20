@@ -1,14 +1,14 @@
 {
-	"name": "Wall",
+	"name": "MiniWall",
 	"plugin-id": "Sprite",
-	"sid": 642736464307167,
+	"sid": 895540492491819,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 426539094655387
+			"sid": 496861404982035
 		}
 	],
 	"effectTypes": [],
@@ -18,13 +18,13 @@
 				"frames": [
 					{
 						"width": 70,
-						"height": 250,
+						"height": 125,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5945191,
+						"imageSpriteId": 5283561,
 						"collisionPoly": {
 							"points": [
 								0.003968253968253968,
@@ -41,7 +41,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 954303089562019,
+				"sid": 884598093481975,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
