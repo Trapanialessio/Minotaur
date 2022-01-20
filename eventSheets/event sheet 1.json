@@ -170,6 +170,15 @@
 							}
 						},
 						{
+							"id": "add-obstacle",
+							"objectClass": "Enemy",
+							"sid": 943725802711873,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"obstacle": "MiniWall"
+							}
+						},
+						{
 							"id": "find-path",
 							"objectClass": "Enemy",
 							"sid": 333559116172242,
