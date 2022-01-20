@@ -1,0 +1,210 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "Hero",
+					"sid": 216324920799152,
+					"behaviorType": "8Direction"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Hero",
+					"sid": 170488725710622,
+					"parameters": {
+						"animation": "\"Running\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 257890353916599
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "Hero",
+					"sid": 304269512235449,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"comparison": 0,
+						"speed": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Hero",
+					"sid": 521886835353548,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 514535303875412
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "Hero",
+					"sid": 924185050101168
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 364106378035904,
+					"parameters": {
+						"layout": "Defeat screen"
+					}
+				}
+			],
+			"sid": 975260125428622
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Hero",
+					"sid": 153802189968458,
+					"parameters": {
+						"object": "WinPoint"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 902704836305972,
+					"parameters": {
+						"layout": "Win screen"
+					}
+				}
+			],
+			"sid": 805554190582954
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-enabled",
+							"objectClass": "Enemy",
+							"sid": 708543254590040,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy",
+							"sid": 550526895921692,
+							"parameters": {
+								"animation": "\"Moving\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 125637784930632
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 549308135738560,
+							"parameters": {
+								"object": "Hero"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Hero",
+							"sid": 262966151102913
+						}
+					],
+					"sid": 794521414916236
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 265849060496384,
+							"parameters": {
+								"interval-seconds": "0.5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-obstacle",
+							"objectClass": "Enemy",
+							"sid": 465725493028632,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"obstacle": "Wall"
+							}
+						},
+						{
+							"id": "find-path",
+							"objectClass": "Enemy",
+							"sid": 333559116172242,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"x": "Hero.X",
+								"y": "Hero.Y"
+							}
+						}
+					],
+					"sid": 697213483831712
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-path-found",
+							"objectClass": "Enemy",
+							"sid": 711207756035477,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"actions": [
+						{
+							"id": "move-along-path",
+							"objectClass": "Enemy",
+							"sid": 999837847789621,
+							"behaviorType": "Pathfinding"
+						}
+					],
+					"sid": 646062030596825
+				}
+			],
+			"sid": 469025366253729
+		}
+	],
+	"sid": 644236329719912
+}

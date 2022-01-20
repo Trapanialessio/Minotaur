@@ -1,0 +1,61 @@
+{
+	"name": "WinPoint",
+	"plugin-id": "Sprite",
+	"sid": 245593082399198,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 120,
+						"height": 120,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1390765,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 115,
+						"height": 115,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7545969,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 110,
+						"height": 110,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2027527,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 936944703220423,
+				"name": "Glowing",
+				"isLooping": true,
+				"isPingPong": true,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 2
+			}
+		],
+		"subfolders": []
+	}
+}
